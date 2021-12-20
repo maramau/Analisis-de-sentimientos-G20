@@ -1,0 +1,23 @@
+0. Deje dos saltos de linea al final de los textos de terminos para señalar finalizacion de archivo
+
+1. De forma automatizada, eliminé los caracteres no alfanumericos excepto las comas, transformé las palabras a sus lemmas y elimine las frases duplicadas. 
+
+2. Manualmente realicé las siguientes modificaciones:
+	2.1. A cada oracion con sustantivos o adjetivos separador por ',' o por un 'and', separé la oración en dos duplicando todas las otras palabras de la frase.
+	Por ej: La oración "Global transportation and supply routes open, safe and secure" la dividi en 6 n-grams:
+		global transportation routes open 
+		global transportation routes safe
+		global transportation routes secure
+		supply chains open 
+		supply chains safe
+		supply chains secure
+
+3. Cada nombre de institución lo separé en dos n-grams. En uno pongo el nombre completo de la institucion y en el otro lo pongo con su version reducda. 
+	Por ej: "necessary reform of the World Trade Organization (WTO)" lo separé en:
+	necessary reform of the World Trade Organization
+	necessary reform of the WTO
+
+
+
+
+

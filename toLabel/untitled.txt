@@ -1,0 +1,1 @@
+toLabel-common.csv son los textos que etiquetamos por separado (cada etiquetador etiqueto 26 textos y estos no se repiten entre grupos...creo)

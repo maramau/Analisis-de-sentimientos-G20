@@ -1,0 +1,21 @@
+En /translations estan los datasets que separe en varios de 850000 caracteres o menos y las devoluciones traducidas. La separacion en cantidad de caracteres fue para poder traducir los documentos automaticamente con DeepL.
+En /united estan los datasets ya unidos.
+
+
+Como llamo a un archivo:
+datasetUnificadoprocesado2M ES.csv
+	1. Unificado: uni varios datasets para crearlo
+		CrowdFlower
+		EmoInt
+		Electoraltweets
+		TEC
+	2. Procesado: Procese los campos texto. Esto incluye: sacar signos de puntuacion, eliminar urls, eliminar hashtags, eliminar rt's (indicador de retweets)
+	3. 2: Utilizo utf-16 en lugar de utf-8 (esto es porque realice algunos experimentos viendo como se interpretaban otros caracteres fuera de utf-8 dentro de openoffice y quedo asi)
+	4. M: De mejorado. mejorado porque agregue un par de columnas que indican sentimientos en otros modelos:
+		positivo-negativo-neutro: A partir de las emociones de Plutchick en los datasets trabajados, etiquete como:
+			POS: joy, trust
+			NEG: anger, sadness, fear, despise
+			NEU: surprise, anticipation
+		Plutchick "reducido"): Esto es un modelo que reduce anticipacion y confianza a una sola categoria por cuestiones estadisticas/ser estadisticamente similares
+
+
